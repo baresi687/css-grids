@@ -1,0 +1,46 @@
+body {
+  display: grid;
+  height: 100vh;
+  background-color: aquamarine;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 1em;
+  grid:
+    "header" auto
+    "nav" auto
+    "main" auto
+    "footer" auto;
+}
+
+@media screen and (min-width: 768px) {
+  /* Desktop */
+  body {
+    grid:
+      "header header" auto
+      "nav main" 1fr
+      "nav footer" auto;
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: burlywood;
+  padding: 1em;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: cornflowerblue;
+  padding: 1em;
+}
+
+.main {
+  grid-area: main;
+  background-color: crimson;
+  padding: 1em;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: tan;
+  padding: 1em;
+}
